@@ -1,14 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { INav } from "@/interface/INav";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-import BookList from "./BookList";
 function Nav(props: INav) {
   return (
     <Tabs
@@ -17,10 +8,12 @@ function Nav(props: INav) {
     >
       {props.elements.map((element) => {
         return (
-          <TabsContent key={element.name} value={element.name}>
-            <div className="w-full h-full">
-              <BookList />
-            </div>
+          <TabsContent
+            key={element.name}
+            value={element.name}
+            className="h-screen"
+          >
+            {element.page()}
           </TabsContent>
         );
       })}
