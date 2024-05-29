@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./index.css";
 import BookList from "./BookList/BookList";
+
+import Comment from './component/Comment'; // Adjust the import path if necessary
+
+
 function App() {
   const [books, setBooks] = useState<IBook[]>([]);
 
@@ -57,6 +61,13 @@ function App() {
       <BookList books={books} title={"인기 북 순위"} />
       <BookList books={books} title={"신간 책"} />
       <BookList books={books} title={"연간 책 순위"} />
+      <Comment
+        rating={4.5}
+        author="좌민서"
+        text="여기는 댓글 내용이 채워질 공간입니다. 댓글댓글댓글댓글댓글"
+        likes={407}
+        replies={16}
+      />
     </div>
   );
 }
