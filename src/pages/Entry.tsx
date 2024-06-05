@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Home from "./Home";
 import Profile from "./Profile";
 import Search from "./Search";
+import Collections from "./Collections";
 const tabs: INavElement[] = [
   {
     name: "Home",
@@ -24,13 +25,7 @@ const tabs: INavElement[] = [
   {
     name: "Collections",
     svg: <FontAwesomeIcon icon={faBook} />,
-    page: () => {
-      return (
-        <div>
-          <h1>Collections</h1>
-        </div>
-      );
-    },
+    page: Collections,
   },
 
   {
