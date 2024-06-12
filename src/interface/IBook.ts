@@ -7,6 +7,12 @@ export interface IBook {
   price: number;
 }
 
+export type BookTable = {
+  title: string;
+  image: string;
+  price: string;
+};
+
 export interface IBookDetail {
   bookId: number;
   title: string;
